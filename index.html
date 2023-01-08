@@ -1,46 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8"/>
-    <meta
-            name="viewport"
-            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
-    />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-    <link rel="stylesheet" href="./style.css"/>
+    <meta charset="UTF-8" />
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./style.css" />
     <title>Quiz app</title>
 </head>
+
 <body>
 
-<div class="quiz-container">
-    <div class="score-counter">
-        <div class="question-scale">
-            <h1 class="question-counter"></h1>
-            <div class="big-scale">
-                <div class="small-scale"></div>
+
+    <div class="quiz-container">
+        <div class="start-page">
+            <div class="start-page-desc">
+                <h1>Quiz</h1>
+                <h1>App</h1>
+            </div>
+
+            <div>
+                <div class="card-section">
+                    <div id="first-card">
+                        <p>Good Luck! 🍀</p>
+
+                    </div>
+
+                    <div id="second-card">
+                        <svg width="101" height="87" viewBox="0 0 101 87" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M42.3635 15.8815C35.0741 8.45227 23.2955 8.45227 16.0061 15.8815C8.66465 23.3636 8.66465 35.5331 16.0061 43.0152L46.9311 74.5331C48.8911 76.5306 52.1089 76.5306 54.0689 74.5331L84.994 43.0152C92.3353 35.5331 92.3353 23.3636 84.994 15.8815C77.7045 8.45227 65.926 8.45227 58.6365 15.8815L54.0689 20.5366C53.1287 21.4949 51.8425 22.0348 50.5 22.0348C49.1575 22.0348 47.8713 21.4949 46.9311 20.5366L42.3635 15.8815ZM49.5014 8.87785L50.5 9.8956L51.4986 8.87785C62.7081 -2.54652 80.9223 -2.54652 92.1318 8.87785C103.289 20.2493 103.289 38.6474 92.1318 50.0189L61.2068 81.5367C55.3268 87.5294 45.6732 87.5294 39.7932 81.5367L8.86818 50.0189C-2.28939 38.6474 -2.28939 20.2493 8.86818 8.87785C20.0777 -2.54652 38.2919 -2.54652 49.5014 8.87785Z"
+                                fill="#FDA19B" />
+                        </svg>
+                    </div>
+
+                </div>
+
+                <button id="start-btn" class="start-btn btn">Start</button>
+            </div>
+
+        </div>
+
+        <div class="game-section">
+            <div class="score-counter">
+                <div class="question-scale">
+                    <h1 class="question-counter"></h1>
+                    <div class="big-scale">
+                        <div class="small-scale"></div>
+                    </div>
+                </div>
+
+                <div>
+                    <h1>Score</h1>
+                    <h1 class="score">0</h1>
+                </div>
+            </div>
+
+
+            <div class="container">
+                <div id="question-container">
+                    <div class="inner"></div>
+                </div>
+
+                <div class="controls">
+                    <button id="prev-btn" class="prev-btn btn">Previous</button>
+                    <button id="next-btn" class="next-btn btn">Next</button>
+                </div>
             </div>
         </div>
 
-        <div>
-            <h1>Score</h1>
-            <h1 class="score">0</h1>
-        </div>
     </div>
 
-
-    <div class="container">
-        <div id="question-container">
-            <div class="inner"></div>
-        </div>
-
-        <div class="controls">
-            <button id="start-btn" class="start-btn btn">Start</button>
-            <button id="prev-btn" class="prev-btn btn">Previous</button>
-            <button id="next-btn" class="next-btn btn">Next</button>
-        </div>
-    </div>
-</div>
-
-<script src="./app.js"></script>
+    <script src="./app.js"></script>
 </body>
+
 </html>

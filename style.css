@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans';
+    background: #1D2A2A;
+}
+
+.quiz-container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.start-page {
+    margin-top: 150px;
+    margin-left: 100px;
+    display: flex;
+    gap: 300px;
+}
+
+.start-page-desc h1 {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 150px;
+    line-height: 180px;
+}
+
+.start-page-desc h1:first-child {
+    color: #F9C632;
+}
+
+.start-page-desc h1:nth-child(2) {
+    color: #FECDBE;
+}
+
+.start-page h3 {
+    font-style: italic;
+    font-weight: 600;
+    font-size: 50px;
+    line-height: 123px;
+    color: #FFFFFF;
+}
+
+.card-section {
+    position: relative;
+    z-index: 0;
+}
+
+.card-section div {
+    width: 220px;
+    height: 220px;
+    border-radius: 50px;
+}
+
+#first-card {
+    background: #FEE8E3;
+    border: 5px solid #FFFFFF;
+}
+
+#first-card p {
+    font-style: italic;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 97px;
+    text-align: center;
+    color: #1D2A2A;
+}
+
+#second-card {
+    background: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    position: absolute;
+    left: 35px;
+    top: 85px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#second-card svg {
+    width: 40px;
+}
+
+.btn {
+    background: #F9C632;
+    padding: 20px;
+    border-radius: 20px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 22px;
+    text-align: center;
+    color: #1D2A2A;
+    width: 200px;
+}
+
+#start-btn {
+    width: 176px;
+    position: absolute;
+    bottom: 175px;
+    right: 410px;
+    z-index: 99;
+}
+
+.game-section {
+    display: none;
+}
+
+#question-container {
+    height: 370px;
+    /* width: 705px; */
+    border: 1px solid black;
+    overflow: hidden;
+    margin: auto;
+}
+
+.inner {
+    /* display: flex; */
+    width: 100%;
+    height: 100%;
+    transition: transform 250ms;
+}
+
+
+#question {
+    /* width: 600px; */
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+
+#question h3 {
+    width: 705px;
+    height: 120px;
+    border: 1px solid red;
+}

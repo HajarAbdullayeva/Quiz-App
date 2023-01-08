@@ -1,13 +1,16 @@
 const API = "https://opentdb.com/api.php?amount=10&category=11&difficulty=easy&type=multiple";
+const startPage = document.querySelector(".start-page")
 const startBtn = document.querySelector("#start-btn");
+
+const gameSection = document.querySelector(".game-section")
+const questionCounter = document.querySelector(".question-counter");
+const smallScale = document.querySelector(".small-scale");
+const score = document.querySelector(".score");
 const container = document.querySelector("#question-container");
 const inner = document.querySelector(".inner")
 const question = document.querySelectorAll("#question");
-const score = document.querySelector(".score");
 const prevBtn = document.querySelector(".prev-btn");
 const nextBtn = document.querySelector(".next-btn");
-const questionCounter = document.querySelector(".question-counter");
-const smallScale = document.querySelector(".small-scale");
 
 questionCounter.innerHTML = `Question 0/10`;
 
@@ -17,8 +20,8 @@ const increment = 30;
 let length = 0;
 
 startBtn.addEventListener("click", async () => {
-    startBtn.style.display = "none";
-    prevBtn.style.display = "block";
+    startPage.style.display = "none";
+    gameSection.style.display = "block";
     nextBtn.style.display = "block";
     let questions = await getQuestions(API);
     let shuffledQuestions = questions.map((question) => {
