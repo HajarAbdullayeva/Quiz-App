@@ -53,26 +53,29 @@ function createQuestionCard(arr) {
     arr.map((question) => {
         questionCounter.innerHTML = `Question ${start + 1}/10`;
 
-        let questionCard = document.createElement("div");
+        const questionCard = document.createElement("div");
         questionCard.id = "question";
 
-        let questionText = document.createElement("h3");
+        const questionDescription = document.createElement("div")
+        questionDescription.classList.add("question-description")
+
+        const questionText = document.createElement("h3");
         questionText.textContent = question.question;
 
-        let buttonGroup = document.createElement("div");
+        const buttonGroup = document.createElement("div");
         buttonGroup.classList.add("button-group");
 
         question.shuffledAnswers.map((answer) => {
-            let button = document.createElement("button");
+            const button = document.createElement("button");
             button.className = 'answer-button';
             button.textContent = answer;
             button.addEventListener("click", function () {
 
                 length++;
 
-                const p = button.parentElement.children
+                const p = button.parentElement.children;
+
                 for (let i = 0; i < p.length; i++) {
-                    console.log(p[i]);
                     p[i].disabled = true;
                 }
 
@@ -99,7 +102,8 @@ function createQuestionCard(arr) {
 
             buttonGroup.appendChild(button);
         });
-        questionCard.appendChild(questionText);
+        questionDescription.appendChild(questionText)
+        questionCard.appendChild(questionDescription);
         questionCard.appendChild(buttonGroup);
         inner.appendChild(questionCard);
     });
@@ -126,8 +130,9 @@ let offset = 0;
 nextBtn.addEventListener("click", () => {
     if (offset === height * (question.length - 1)) {
         offset = 0;
+        console.log(offset);
     } else {
-        offset = offset + height;
+        offset = offset + height - 20;
     }
 
     inner.style.transform = `translateY(-${offset}px)`
@@ -137,7 +142,7 @@ prevBtn.addEventListener("click", () => {
     if (offset === 0) {
         offset = height * (question.length - 1);
     } else {
-        offset = offset - height;
+        offset = offset - height + 20;
     }
 
     inner.style.transform = `translateY(-${offset}px)`
